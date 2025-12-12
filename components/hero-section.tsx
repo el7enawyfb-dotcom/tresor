@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
 import { Button } from "@/components/ui/button"
 import { Sparkles } from "lucide-react"
+import { AnimatedNetworkBackground } from "@/components/animated-network-background"
 
 export function HeroSection() {
   const { language } = useLanguage()
@@ -12,6 +13,8 @@ export function HeroSection() {
 
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
+      <AnimatedNetworkBackground />
+
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(203,161,53,0.1),transparent_50%)]" />
@@ -27,11 +30,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          <h1 className="font-serif text-5xl font-bold tracking-tight text-foreground sm:text-7xl lg:text-8xl">
-            <span className="block opacity-0 animate-slide-in-left animation-delay-200 font-sans">
-              {t.title1[language]}
-            </span>
-            <span className="text-gradient-gold block opacity-0 animate-slide-in-right animation-delay-400 font-sans">
+          <h1 className="font-sans text-5xl font-bold tracking-tight text-foreground sm:text-7xl lg:text-8xl">
+            <span className="block opacity-0 animate-slide-in-left animation-delay-200">{t.title1[language]}</span>
+            <span className="text-gradient-gold block opacity-0 animate-slide-in-right animation-delay-400">
               {t.title2[language]}
             </span>
           </h1>
@@ -44,7 +45,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:scale-105 font-sans"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:scale-105 font-sans animate-pulse-gold"
             >
               <Link href="/contact">{translations.header.startProject[language]}</Link>
             </Button>

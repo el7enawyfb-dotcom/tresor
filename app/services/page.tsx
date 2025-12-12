@@ -1,93 +1,83 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Camera, TrendingUp, Globe, Sparkles, Check } from "lucide-react"
 import Link from "next/link"
-
-export const metadata = {
-  title: "Services | Trésor Agency",
-  description:
-    "Explore our comprehensive service packages: Design & Production, Marketing & Media, Website Creation, and Full Brand Identity.",
-}
+import { translations } from "@/lib/translations"
+import { useLanguage } from "@/lib/language-context"
 
 export default function ServicesPage() {
+  const { language } = useLanguage()
+  const t = translations.servicesPage
+  const tServices = translations.services
+
   const services = [
     {
       id: "design",
-      title: "Design & Production",
-      titleAr: "التصميم والإنتاج",
+      title: tServices.design.title[language],
       icon: Camera,
-      description: "Professional visual content creation for your brand",
-      descriptionAr: "إنتاج محتوى مرئي احترافي لعلامتك التجارية",
+      description: tServices.design.description[language],
       includes: [
-        "Professional poster and ad design",
-        "Short and long-form video editing",
-        "Commercial photography sessions",
-        "Social media visual content",
-        "Motion graphics and animations",
-        "Product photography",
+        t.designIncludes.item1[language],
+        t.designIncludes.item2[language],
+        t.designIncludes.item3[language],
+        t.designIncludes.item4[language],
+        t.designIncludes.item5[language],
+        t.designIncludes.item6[language],
       ],
-      deliveryTime: "3-7 business days",
-      whyChoose:
-        "Our creative team brings years of experience in visual storytelling, ensuring every piece of content captures attention and drives engagement.",
+      deliveryTime: t.designDelivery[language],
+      whyChoose: t.designWhy[language],
     },
     {
       id: "marketing",
-      title: "Marketing & Media Buying",
-      titleAr: "التسويق وشراء الإعلانات",
+      title: tServices.marketing.title[language],
       icon: TrendingUp,
-      description: "Data-driven marketing campaigns that deliver results",
-      descriptionAr: "حملات تسويقية مدروسة تحقق النتائج",
+      description: tServices.marketing.description[language],
       includes: [
-        "PPC campaign management (Google Ads)",
-        "Social media advertising (Meta, LinkedIn)",
-        "Marketing strategy development",
-        "Live chat & inbox management",
-        "Lead generation campaigns",
-        "Performance analytics & reporting",
+        t.marketingIncludes.item1[language],
+        t.marketingIncludes.item2[language],
+        t.marketingIncludes.item3[language],
+        t.marketingIncludes.item4[language],
+        t.marketingIncludes.item5[language],
+        t.marketingIncludes.item6[language],
       ],
-      deliveryTime: "Ongoing monthly service",
-      whyChoose:
-        "We combine creativity with data analytics to maximize your ROI and turn visitors into loyal customers.",
+      deliveryTime: t.marketingDelivery[language],
+      whyChoose: t.marketingWhy[language],
     },
     {
       id: "web",
-      title: "Website Creation",
-      titleAr: "إنشاء المواقع الإلكترونية",
+      title: tServices.web.title[language],
       icon: Globe,
-      description: "Modern, fast, and beautiful websites",
-      descriptionAr: "مواقع حديثة وسريعة وجميلة",
+      description: tServices.web.description[language],
       includes: [
-        "Custom Next.js website development",
-        "Responsive design (mobile, tablet, desktop)",
-        "SEO optimization",
-        "Performance optimization",
-        "Optional CMS integration",
-        "Maintenance & support",
+        t.webIncludes.item1[language],
+        t.webIncludes.item2[language],
+        t.webIncludes.item3[language],
+        t.webIncludes.item4[language],
+        t.webIncludes.item5[language],
+        t.webIncludes.item6[language],
       ],
-      deliveryTime: "2-4 weeks",
-      whyChoose:
-        "Built with cutting-edge technology and best practices, our websites are fast, secure, and designed to convert visitors into customers.",
+      deliveryTime: t.webDelivery[language],
+      whyChoose: t.webWhy[language],
     },
     {
       id: "branding",
-      title: "Full Brand Identity",
-      titleAr: "الهوية التجارية الكاملة",
+      title: tServices.branding.title[language],
       icon: Sparkles,
-      description: "Complete brand strategy from concept to execution",
-      descriptionAr: "استراتيجية علامة تجارية كاملة من الفكرة للتنفيذ",
+      description: tServices.branding.description[language],
       includes: [
-        "Logo design & brand mark",
-        "Brand identity guidelines",
-        "Color palette & typography system",
-        "Business card & stationery design",
-        "Digital & print application",
-        "Brand strategy consultation",
+        t.brandingIncludes.item1[language],
+        t.brandingIncludes.item2[language],
+        t.brandingIncludes.item3[language],
+        t.brandingIncludes.item4[language],
+        t.brandingIncludes.item5[language],
+        t.brandingIncludes.item6[language],
       ],
-      deliveryTime: "3-5 weeks",
-      whyChoose:
-        "We create timeless brand identities that resonate with your audience and stand out in the marketplace.",
+      deliveryTime: t.brandingDelivery[language],
+      whyChoose: t.brandingWhy[language],
     },
   ]
 
@@ -100,10 +90,8 @@ export default function ServicesPage() {
         <section className="border-b border-border bg-gradient-to-br from-primary/5 via-transparent to-transparent py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-6xl">Our Services</h1>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Comprehensive solutions tailored to your business needs. No fixed pricing—every project is unique.
-              </p>
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">{t.title[language]}</h1>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">{t.subtitle[language]}</p>
             </div>
           </div>
         </section>
@@ -122,9 +110,6 @@ export default function ServicesPage() {
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-3xl font-bold">{service.title}</CardTitle>
-                          <CardDescription className="mt-2 text-base text-muted-foreground" dir="rtl">
-                            {service.titleAr}
-                          </CardDescription>
                           <p className="mt-4 text-muted-foreground">{service.description}</p>
                         </div>
                       </div>
@@ -132,7 +117,7 @@ export default function ServicesPage() {
                     <CardContent className="pt-8">
                       <div className="grid gap-8 lg:grid-cols-2">
                         <div>
-                          <h3 className="mb-4 text-lg font-semibold text-foreground">What's Included</h3>
+                          <h3 className="mb-4 text-lg font-semibold text-foreground">{t.whatsIncluded[language]}</h3>
                           <ul className="space-y-3">
                             {service.includes.map((item, i) => (
                               <li key={i} className="flex items-start gap-3">
@@ -144,15 +129,15 @@ export default function ServicesPage() {
                         </div>
                         <div className="space-y-6">
                           <div>
-                            <h3 className="mb-2 text-lg font-semibold text-foreground">Typical Delivery Time</h3>
+                            <h3 className="mb-2 text-lg font-semibold text-foreground">{t.deliveryTime[language]}</h3>
                             <p className="text-sm text-muted-foreground">{service.deliveryTime}</p>
                           </div>
                           <div>
-                            <h3 className="mb-2 text-lg font-semibold text-foreground">Why Choose Us</h3>
+                            <h3 className="mb-2 text-lg font-semibold text-foreground">{t.whyChoose[language]}</h3>
                             <p className="text-sm leading-relaxed text-muted-foreground">{service.whyChoose}</p>
                           </div>
                           <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href={`/contact?service=${service.id}`}>Contact About This Service</Link>
+                            <Link href={`/contact?service=${service.id}`}>{t.contactAbout[language]}</Link>
                           </Button>
                         </div>
                       </div>

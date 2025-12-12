@@ -6,66 +6,88 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import { translations } from "@/lib/translations"
+import { useLanguage } from "@/lib/language-context"
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState("all")
+  const { language } = useLanguage()
+  const t = translations.portfolio
 
   const filters = [
-    { id: "all", label: "All Projects" },
-    { id: "design", label: "Design & Video" },
-    { id: "marketing", label: "Marketing" },
-    { id: "web", label: "Websites" },
-    { id: "branding", label: "Branding" },
+    { id: "all", label: t.allProjects[language] },
+    { id: "design", label: t.designVideo[language] },
+    { id: "marketing", label: t.marketing[language] },
+    { id: "web", label: t.websites[language] },
+    { id: "branding", label: t.branding[language] },
   ]
 
   const projects = [
     {
       id: 1,
-      title: "Luxury Hotel Campaign",
+      title: language === "ar" ? "حملة فندق فاخر" : "Luxury Hotel Campaign",
       category: "design",
-      industry: "Hospitality",
+      industry: language === "ar" ? "الضيافة" : "Hospitality",
       image: "/luxury-hotel-campaign-cinematic-photography.jpg",
-      description: "Complete visual campaign including photography and video production",
+      description:
+        language === "ar"
+          ? "حملة مرئية كاملة تشمل التصوير الفوتوغرافي وإنتاج الفيديو"
+          : "Complete visual campaign including photography and video production",
     },
     {
       id: 2,
-      title: "E-commerce Platform",
+      title: language === "ar" ? "منصة تجارة إلكترونية" : "E-commerce Platform",
       category: "web",
-      industry: "Retail",
+      industry: language === "ar" ? "التجزئة" : "Retail",
       image: "/modern-ecommerce-website-dark-elegant.jpg",
-      description: "High-performance Next.js e-commerce platform with custom CMS",
+      description:
+        language === "ar"
+          ? "منصة تجارة إلكترونية عالية الأداء مع نظام إدارة محتوى مخصص"
+          : "High-performance Next.js e-commerce platform with custom CMS",
     },
     {
       id: 3,
-      title: "Tech Startup Branding",
+      title: language === "ar" ? "هوية شركة تقنية ناشئة" : "Tech Startup Branding",
       category: "branding",
-      industry: "Technology",
+      industry: language === "ar" ? "التكنولوجيا" : "Technology",
       image: "/tech-startup-logo-brand-identity-modern.jpg",
-      description: "Full brand identity system from concept to guidelines",
+      description:
+        language === "ar"
+          ? "نظام هوية تجارية كامل من المفهوم إلى الإرشادات"
+          : "Full brand identity system from concept to guidelines",
     },
     {
       id: 4,
-      title: "Social Media Campaign",
+      title: language === "ar" ? "حملة وسائل التواصل الاجتماعي" : "Social Media Campaign",
       category: "marketing",
-      industry: "Fashion",
+      industry: language === "ar" ? "الأزياء" : "Fashion",
       image: "/fashion-social-media-ads-campaign.jpg",
-      description: "Multi-platform paid advertising campaign with 300% ROI",
+      description:
+        language === "ar"
+          ? "حملة إعلانية متعددة المنصات مع عائد استثمار 300٪"
+          : "Multi-platform paid advertising campaign with 300% ROI",
     },
     {
       id: 5,
-      title: "Restaurant Rebranding",
+      title: language === "ar" ? "إعادة هوية مطعم" : "Restaurant Rebranding",
       category: "branding",
-      industry: "Food & Beverage",
+      industry: language === "ar" ? "الطعام والشراب" : "Food & Beverage",
       image: "/restaurant-branding-elegant-luxury.jpg",
-      description: "Complete rebrand including logo, menu design, and digital presence",
+      description:
+        language === "ar"
+          ? "إعادة هوية كاملة تشمل الشعار وتصميم القائمة والحضور الرقمي"
+          : "Complete rebrand including logo, menu design, and digital presence",
     },
     {
       id: 6,
-      title: "Product Launch Video",
+      title: language === "ar" ? "فيديو إطلاق منتج" : "Product Launch Video",
       category: "design",
-      industry: "Technology",
+      industry: language === "ar" ? "التكنولوجيا" : "Technology",
       image: "/product-launch-video-cinematic-dark.jpg",
-      description: "Cinematic product launch video with motion graphics",
+      description:
+        language === "ar"
+          ? "فيديو إطلاق منتج سينمائي مع رسومات متحركة"
+          : "Cinematic product launch video with motion graphics",
     },
   ]
 
@@ -81,12 +103,8 @@ export default function PortfolioPage() {
         <section className="border-b border-border bg-gradient-to-br from-primary/5 via-transparent to-transparent py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-                Our Portfolio
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Explore our latest work across branding, design, web development, and marketing campaigns.
-              </p>
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">{t.title[language]}</h1>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">{t.subtitle[language]}</p>
             </div>
           </div>
         </section>

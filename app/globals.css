@@ -126,19 +126,20 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Force Arabic font on all elements */
+  /* Updated font rules to properly apply Arabic font to all text */
+  /* Default: all elements use Arabic font (Tajawal) */
   * {
-    font-family: var(--font-sans) !important;
+    font-family: var(--font-sans);
   }
 
-  /* English titles use serif font */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  /* Only apply serif font to English headings when explicitly using font-serif class */
+  .font-serif {
     font-family: var(--font-serif) !important;
+  }
+
+  /* Force font-sans to always use Arabic font */
+  .font-sans {
+    font-family: var(--font-sans) !important;
   }
 
   /* Gold gradient text utility */
@@ -227,6 +228,23 @@
 
   .animate-scale-in {
     animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  /* Kept pulse-gold animation for the button */
+  @keyframes pulseGold {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-gold {
+    animation: pulseGold 2s ease-in-out infinite;
   }
 
   .animation-delay-100 {

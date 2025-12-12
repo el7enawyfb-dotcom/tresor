@@ -178,7 +178,7 @@ export function Footer() {
             <p className="text-xs leading-5 text-muted-foreground text-center md:text-start font-sans">
               © {new Date().getFullYear()} Trésor Agency. {t.copyright[language]}
             </p>
-            <p className="text-xs leading-5 text-primary font-semibold font-sans">{t.developedBy[language]}</p>
+            <p className="text-xs leading-5 text-primary font-semibold font-sans">Developed by Tresor</p>
           </div>
         </div>
       </div>
