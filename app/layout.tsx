@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Tajawal, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/lib/language-context"
+import { Preloader } from "@/components/preloader"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 const tajawal = Tajawal({
@@ -63,9 +65,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" className="dark" dir="rtl" suppressHydrationWarning>
+    <html lang="en" className="dark" dir="ltr" suppressHydrationWarning>
       <body className={`${tajawal.variable} ${montserrat.variable} font-sans antialiased`}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <Preloader />
+          {children}
+          <WhatsAppFloat />
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

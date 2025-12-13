@@ -57,12 +57,12 @@ export default function HomePage() {
       <section className="bg-background py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="font-sans text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t.services.title[language]}
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">{t.services.subtitle[language]}</p>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-6 lg:max-w-none lg:grid-cols-4">
             {services.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}
@@ -77,7 +77,7 @@ export default function HomePage() {
       <section className="bg-card py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="font-sans text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t.cta.title[language]}
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">{t.cta.subtitle[language]}</p>

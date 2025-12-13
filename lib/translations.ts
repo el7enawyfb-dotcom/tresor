@@ -260,7 +260,78 @@ export const translations = {
     title: { ar: "موثوق به من قبل", en: "Trusted By" },
   },
   testimonials: {
-    title: { ar: "ماذا يقول عملاؤنا", en: "What Our Clients Say" },
+    title: { ar: "آراء عملائنا", en: "Client Testimonials" },
+    subtitle: { ar: "شاهد ما يقوله عملاؤنا عن العمل معنا", en: "See what our clients say about working with us" },
+  },
+  privacy: {
+    title: { ar: "سياسة الخصوصية", en: "Privacy Policy" },
+    lastUpdated: { ar: "آخر تحديث", en: "Last Updated" },
+    intro: {
+      ar: "في وكالة تريزور، نحترم خصوصيتك ونلتزم بحماية معلوماتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية بياناتك عند استخدام خدماتنا.",
+      en: "At Trésor Agency, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our services.",
+    },
+    infoCollectionTitle: { ar: "المعلومات التي نجمعها", en: "Information We Collect" },
+    infoCollection: {
+      ar: "نجمع المعلومات التي تقدمها مباشرة عند الاتصال بنا أو استخدام خدماتنا، بما في ذلك الاسم والبريد الإلكتروني ورقم الهاتف وتفاصيل الشركة وتفاصيل المشروع. قد نجمع أيضاً بيانات الاستخدام تلقائياً من خلال ملفات تعريف الارتباط والتقنيات المماثلة.",
+      en: "We collect information you provide directly when contacting us or using our services, including name, email, phone number, company details, and project details. We may also automatically collect usage data through cookies and similar technologies.",
+    },
+    useInfoTitle: { ar: "كيف نستخدم معلوماتك", en: "How We Use Your Information" },
+    useInfo: {
+      ar: "نستخدم معلوماتك لتقديم خدماتنا، والتواصل معك بشأن مشاريعك، وتحسين خدماتنا، وإرسال تحديثات تسويقية (يمكنك إلغاء الاشتراك في أي وقت). لن نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة دون موافقتك.",
+      en: "We use your information to provide our services, communicate with you about your projects, improve our services, and send marketing updates (you can opt out anytime). We will never sell or share your personal information with third parties without your consent.",
+    },
+    dataSecurityTitle: { ar: "أمن البيانات", en: "Data Security" },
+    dataSecurity: {
+      ar: "نطبق تدابير أمنية معقولة لحماية معلوماتك من الوصول غير المصرح به أو التغيير أو الإفصاح أو التدمير. ومع ذلك، لا توجد طريقة نقل عبر الإنترنت آمنة بنسبة 100%.",
+      en: "We implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.",
+    },
+    yourRightsTitle: { ar: "حقوقك", en: "Your Rights" },
+    yourRights: {
+      ar: "لديك الحق في الوصول إلى معلوماتك الشخصية وتصحيحها أو حذفها. للاستفسارات المتعلقة بالخصوصية، يرجى الاتصال بنا على hello@tresor-agency.com.",
+      en: "You have the right to access, correct, or delete your personal information. For privacy inquiries, please contact us at hello@tresor-agency.com.",
+    },
+  },
+  terms: {
+    title: { ar: "شروط الخدمة", en: "Terms of Service" },
+    lastUpdated: { ar: "آخر تحديث", en: "Last Updated" },
+    intro: {
+      ar: "مرحباً بك في وكالة تريزور. باستخدام خدماتنا، فإنك توافق على الالتزام بشروط الخدمة هذه. يرجى قراءتها بعناية.",
+      en: "Welcome to Trésor Agency. By using our services, you agree to be bound by these Terms of Service. Please read them carefully.",
+    },
+    servicesTitle: { ar: "خدماتنا", en: "Our Services" },
+    services: {
+      ar: "تقدم وكالة تريزور خدمات التصميم والتسويق وتطوير المواقع والبراندينج. تختلف نطاقات المشروع والتسعير والجداول الزمنية بناءً على احتياجاتك المحددة ويتم الاتفاق عليها كتابياً قبل بدء العمل.",
+      en: "Trésor Agency provides design, marketing, web development, and branding services. Project scopes, pricing, and timelines vary based on your specific needs and are agreed upon in writing before work begins.",
+    },
+    clientObligationsTitle: { ar: "التزامات العميل", en: "Client Obligations" },
+    clientObligations: {
+      ar: "أنت توافق على تقديم المعلومات والمواد والتعليقات اللازمة في الوقت المناسب. التأخير من جانبك قد يؤثر على جداول المشروع. أنت مسؤول عن ضمان حصولك على جميع الحقوق والأذونات اللازمة لأي محتوى تقدمه لنا.",
+      en: "You agree to provide necessary information, materials, and feedback in a timely manner. Delays on your part may affect project timelines. You are responsible for ensuring you have all necessary rights and permissions for any content you provide to us.",
+    },
+    paymentTitle: { ar: "الدفع والإلغاء", en: "Payment & Cancellation" },
+    payment: {
+      ar: "شروط الدفع محددة في اتفاقية المشروع الخاصة بك. عادةً ما نطلب إيداعاً مقدماً قبل بدء العمل. تخضع الإلغاءات لشروط عقدك وقد تتطلب رسوماً بناءً على العمل المنجز.",
+      en: "Payment terms are specified in your project agreement. We typically require an upfront deposit before work begins. Cancellations are subject to your contract terms and may incur fees based on work completed.",
+    },
+    ipRightsTitle: { ar: "حقوق الملكية الفكرية", en: "Intellectual Property Rights" },
+    ipRights: {
+      ar: "عند استلام الدفع الكامل، تنتقل ملكية التسليمات النهائية المتفق عليها إليك. نحتفظ بالحق في عرض عملك في محفظتنا ما لم يتم الاتفاق على خلاف ذلك. أي عمل غير مدفوع يبقى ملكية وكالة تريزور.",
+      en: "Upon full payment, ownership of the agreed-upon final deliverables transfers to you. We retain the right to showcase your work in our portfolio unless otherwise agreed. Any unpaid work remains property of Trésor Agency.",
+    },
+    limitationTitle: { ar: "حدود المسؤولية", en: "Limitation of Liability" },
+    limitation: {
+      ar: "نسعى جاهدين لتقديم خدمات عالية الجودة، لكننا لا نضمن نتائج محددة. مسؤوليتنا محدودة بالمبلغ المدفوع لخدماتنا. لن نكون مسؤولين عن أي أضرار غير مباشرة أو عرضية أو تبعية.",
+      en: "We strive to deliver high-quality services, but we do not guarantee specific results. Our liability is limited to the amount paid for our services. We shall not be liable for any indirect, incidental, or consequential damages.",
+    },
+    contactTitle: { ar: "اتصل بنا", en: "Contact Us" },
+    contact: {
+      ar: "إذا كان لديك أي أسئلة حول شروط الخدمة هذه، يرجى الاتصال بنا على hello@tresor-agency.com أو +20 1156990699.",
+      en: "If you have any questions about these Terms of Service, please contact us at hello@tresor-agency.com or +20 1156990699.",
+    },
+  },
+  whatsapp: {
+    chatWithUs: { ar: "تحدث معنا", en: "Chat with us" },
+    tooltip: { ar: "تواصل عبر واتساب", en: "Contact via WhatsApp" },
   },
 }
 
