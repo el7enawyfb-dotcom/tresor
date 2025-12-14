@@ -215,8 +215,8 @@ function ContactFormContent() {
               <Phone className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium">{t.phoneLabel[language]}</p>
-                <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-primary">
-                  567-890 (234) 1+
+                <a href="tel:+201070373737" className="text-sm text-muted-foreground hover:text-primary" dir="ltr">
+                  01070373737
                 </a>
               </div>
             </div>

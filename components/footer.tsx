@@ -59,11 +59,11 @@ export function Footer() {
                     {language === "ar" ? "نحن متاحون للرد على استفساراتكم" : "We're available to answer your inquiries"}
                   </p>
                   <a
-                    href="tel:+201156990699"
+                    href="tel:+201070373737"
                     className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300 font-sans inline-block"
                     dir="ltr"
                   >
-                    01156990699
+                    01070373737
                   </a>
                 </div>
               </div>

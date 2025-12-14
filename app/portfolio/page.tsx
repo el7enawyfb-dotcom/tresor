@@ -20,6 +20,7 @@ export default function PortfolioPage() {
     { id: "marketing", label: t.marketing[language] },
     { id: "web", label: t.websites[language] },
     { id: "branding", label: t.branding[language] },
+    { id: "logos", label: t.logos[language] },
   ]
 
   const projects = [
@@ -33,6 +34,7 @@ export default function PortfolioPage() {
         language === "ar"
           ? "حملة مرئية كاملة تشمل التصوير الفوتوغرافي وإنتاج الفيديو"
           : "Complete visual campaign including photography and video production",
+      href: "/portfolio/1",
     },
     {
       id: 2,
@@ -44,6 +46,7 @@ export default function PortfolioPage() {
         language === "ar"
           ? "منصة تجارة إلكترونية عالية الأداء مع نظام إدارة محتوى مخصص"
           : "High-performance Next.js e-commerce platform with custom CMS",
+      href: "/portfolio/2",
     },
     {
       id: 3,
@@ -55,17 +58,43 @@ export default function PortfolioPage() {
         language === "ar"
           ? "نظام هوية تجارية كامل من المفهوم إلى الإرشادات"
           : "Full brand identity system from concept to guidelines",
+      href: "/portfolio/3",
     },
     {
       id: 4,
-      title: language === "ar" ? "حملة وسائل التواصل الاجتماعي" : "Social Media Campaign",
+      title: "Petit Bébé",
       category: "marketing",
-      industry: language === "ar" ? "الأزياء" : "Fashion",
-      image: "/fashion-social-media-ads-campaign.jpg",
+      industry: language === "ar" ? "منتجات الأطفال" : "Baby Products",
+      image: "/images/petitbebe-carseat-ad.jpeg",
       description:
         language === "ar"
-          ? "حملة إعلانية متعددة المنصات مع عائد استثمار 300٪"
-          : "Multi-platform paid advertising campaign with 300% ROI",
+          ? "حملة إعلانية لمنتجات الأطفال - كرسي سيارة للأطفال من 3 أشهر إلى سنتين - خصم 20%"
+          : "Baby products advertising campaign - Car seat suitable from 3 months to 2 years old - 20% OFF",
+      href: "/portfolio/petit-bebe",
+    },
+    {
+      id: 11,
+      title: language === "ar" ? "خبز وشاورما" : "Khubz w Shawarma",
+      category: "marketing",
+      industry: language === "ar" ? "المطاعم" : "Restaurants",
+      image: "/images/khubz-shawarma-mawlid.jpg",
+      description:
+        language === "ar"
+          ? "حملة احتفالية بالمولد النبوي - توزيع خبز السرايا مجاناً في فرع المعادي"
+          : "Prophet's Birthday celebration campaign - Free Khubz Al-Saraya distribution at Maadi branch",
+      href: "/portfolio/khubz-shawarma",
+    },
+    {
+      id: 12,
+      title: "Phi Line Studio",
+      category: "marketing",
+      industry: language === "ar" ? "الأزياء والإكسسوارات" : "Fashion & Accessories",
+      image: "/images/philine-studio-hats.jpeg",
+      description:
+        language === "ar"
+          ? "حملة تسويقية لمنتجات الأزياء الفاخرة - قبعات صيفية أنيقة بتصميم عصري - الدقة في كل تفصيلة"
+          : "Luxury fashion products marketing campaign - Elegant summer hats with modern design - Precision in every detail",
+      href: "/portfolio/philine-studio",
     },
     {
       id: 5,
@@ -77,6 +106,7 @@ export default function PortfolioPage() {
         language === "ar"
           ? "إعادة هوية كاملة تشمل الشعار وتصميم القائمة والحضور الرقمي"
           : "Complete rebrand including logo, menu design, and digital presence",
+      href: "/portfolio/5",
     },
     {
       id: 6,
@@ -88,6 +118,55 @@ export default function PortfolioPage() {
         language === "ar"
           ? "فيديو إطلاق منتج سينمائي مع رسومات متحركة"
           : "Cinematic product launch video with motion graphics",
+      href: "/portfolio/6",
+    },
+    {
+      id: 7,
+      title: "Petit Bébé",
+      category: "logos",
+      industry: language === "ar" ? "منتجات الأطفال" : "Baby Products",
+      image: "/images/petitbebe-logo.png",
+      description:
+        language === "ar"
+          ? "شعار عصري ومرح لعلامة تجارية لمنتجات الأطفال"
+          : "Playful and modern logo for a baby products brand",
+      href: "/portfolio/7",
+    },
+    {
+      id: 8,
+      title: "Ugee",
+      category: "logos",
+      industry: language === "ar" ? "التكنولوجيا" : "Technology",
+      image: "/images/ugeelogo400px-25a33bb1-98be-46c0-af57-f413bb540049.webp",
+      description:
+        language === "ar"
+          ? "شعار بسيط وأنيق لشركة تقنية متخصصة في الأجهزة الرسومية"
+          : "Minimalist and elegant logo for a graphics tablet technology company",
+      href: "/portfolio/8",
+    },
+    {
+      id: 9,
+      title: "XP-Pen",
+      category: "logos",
+      industry: language === "ar" ? "التكنولوجيا" : "Technology",
+      image: "/images/xp-pen-logo.png",
+      description:
+        language === "ar"
+          ? "شعار احترافي وعصري لشركة أقلام رقمية رائدة"
+          : "Professional and modern logo for a leading digital pen company",
+      href: "/portfolio/9",
+    },
+    {
+      id: 10,
+      title: "Huion",
+      category: "logos",
+      industry: language === "ar" ? "التكنولوجيا" : "Technology",
+      image: "/images/huion-current-logo-vertical-arrangement.png",
+      description:
+        language === "ar"
+          ? "شعار مميز بتاج ملكي لشركة رائدة في الأجهزة الرسومية"
+          : "Distinctive crown logo for a leading graphics device company",
+      href: "/portfolio/10",
     },
   ]
 
@@ -131,14 +210,23 @@ export default function PortfolioPage() {
         <section className="py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {filteredProjects.map((project) => (
-                <Link key={project.id} href={`/portfolio/${project.id}`}>
-                  <Card className="group overflow-hidden border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-                    <div className="relative aspect-[3/2] overflow-hidden">
+              {filteredProjects.map((project, index) => (
+                <Link key={project.id} href={project.href}>
+                  <Card
+                    className="group overflow-hidden border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-4"
+                    style={{ animationDelay: `${index * 100}ms`, animationFillMode: "both" }}
+                  >
+                    <div
+                      className={`relative aspect-[3/2] overflow-hidden ${project.category === "logos" ? "bg-white flex items-center justify-center p-6" : ""}`}
+                    >
                       <img
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        className={`transition-transform duration-500 group-hover:scale-110 ${
+                          project.category === "logos"
+                            ? "max-h-full max-w-full object-contain"
+                            : "h-full w-full object-cover"
+                        }`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                     </div>

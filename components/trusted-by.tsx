@@ -1,20 +1,30 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { useLanguage } from "@/lib/language-context"
+import Image from "next/image"
 
 export function TrustedBy() {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const { language } = useLanguage()
 
-  // Dummy client logos - replace with actual client logos
   const clients = [
-    "Client Logo 1",
-    "Client Logo 2",
-    "Client Logo 3",
-    "Client Logo 4",
-    "Client Logo 5",
-    "Client Logo 6",
-    "Client Logo 7",
-    "Client Logo 8",
+    {
+      name: "Ugee",
+      logo: "/images/ugeelogo400px-25a33bb1-98be-46c0-af57-f413bb540049.webp",
+    },
+    {
+      name: "Huion",
+      logo: "/images/huion-current-logo-vertical-arrangement.png",
+    },
+    {
+      name: "XP-Pen",
+      logo: "/images/xp-pen-logo.png",
+    },
+    {
+      name: "Petit Bébé",
+      logo: "/images/petitbebe-logo.png",
+    },
   ]
 
   useEffect(() => {
@@ -38,16 +48,26 @@ export function TrustedBy() {
     <section className="border-y border-border/40 bg-card/50 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-          Trusted by Industry Leaders
+          {language === "ar" ? "موثوق من قبل رواد الصناعة" : "Trusted by Industry Leaders"}
         </h2>
         <div className="relative mt-8 overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-background to-transparent" />
+
           <div ref={scrollRef} className="flex gap-x-12 overflow-x-hidden" style={{ scrollBehavior: "smooth" }}>
-            {[...clients, ...clients].map((client, index) => (
+            {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
               <div
                 key={index}
-                className="flex h-16 w-40 flex-shrink-0 items-center justify-center rounded-lg border border-border/50 bg-muted/20 px-6"
+                className="group flex h-24 w-48 flex-shrink-0 items-center justify-center rounded-xl border border-border/50 bg-white px-6 transition-all duration-500 hover:scale-110 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
               >
-                <span className="text-sm font-medium text-muted-foreground">{client}</span>
+                <Image
+                  src={client.logo || "/placeholder.svg"}
+                  alt={client.name}
+                  width={160}
+                  height={80}
+                  className="h-16 w-auto object-contain transition-all duration-500 group-hover:scale-110"
+                  unoptimized
+                />
               </div>
             ))}
           </div>

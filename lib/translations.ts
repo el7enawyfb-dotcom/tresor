@@ -170,6 +170,7 @@ export const translations = {
     marketing: { ar: "التسويق", en: "Marketing" },
     websites: { ar: "المواقع الإلكترونية", en: "Websites" },
     branding: { ar: "البراندينج", en: "Branding" },
+    logos: { ar: "اللوجوهات", en: "Logos" },
   },
   servicesPage: {
     title: { ar: "خدماتنا", en: "Our Services" },
